@@ -1,17 +1,16 @@
 {
   "name": "webpack-workshop-2018",
   "version": "1.0.0",
-  "description":
-    "Learning resources for the webpack academy workshop series for 2018",
+  "description": "Learning resources for the webpack academy workshop series for 2018",
   "main": "index.js",
   "scripts": {
     "webpack": "webpack",
-    "debug":
-      "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
-    "prod": "npm run webpack -- --mode production",
-    "dev": "npm run webpack -- --mode development --watch",
-    "prod:debug": "npm run debug -- --mode production",
-    "dev:debug": "npm run debug -- --mode development"
+    "webpack-dev-server": "webpack-dev-server --env.mode production",
+    "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
+    "prod": "npm run webpack -- --env.mode production",
+    "dev": "npm run webpack -- --env.mode development --watch",
+    "prod:debug": "npm run debug -- --env.mode production",
+    "dev:debug": "npm run debug -- --env.mode development"
   },
   "repository": {
     "type": "git",
@@ -43,6 +42,7 @@
     "workbox-webpack-plugin": "^3.2.0"
   },
   "dependencies": {
-    "d3": "^5.1.0"
+    "d3": "^5.1.0",
+    "html-webpack-plugin": "^3.2.0"
   }
 }
